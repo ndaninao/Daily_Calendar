@@ -1,0 +1,44 @@
+h1 {
+    padding: 10px;
+    margin-top: 30px;
+}
+
+
+#currentdate {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#header {
+    border-style: solid; 
+    border-width: 3px; 
+}
+
+#row8, #row9, #row10, #row11, #row12, #row1, #row2, #row3, #row4, #row5, #row6 {
+    border-style: solid;
+    border-width: 2px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 8px;
+}
+
+
+#row8 {
+    margin-top: 20px;
+}
+
+.col-md-1 {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.col-md-10 {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
