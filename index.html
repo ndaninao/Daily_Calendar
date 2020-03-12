@@ -8,9 +8,9 @@
     <title>Daily Calendar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://momentjs.com/downloads/moment.js></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+
   </head>
 
   <body>
@@ -139,60 +139,22 @@
     <script type="text/javascript">
 
     var currentDate = document.getElementById("currentDate");
-      //currentDate("Date & Time: " + moment().format('MMMM Do YYYY, h:mm:ss a'));
+    currentDate = ("Date & Time: " + moment().format('MMMM Do YYYY, h:mm:ss a'));
   
-
+    var userInput = document.getElementById("userInput");
 
     $(document).ready(function() {
 
-        $("<button>").click(function(){
-         //takes user input from text box to local storage. JSONstringify 
-});
+            function saveValue(userInput) {
+                $("<button>").click(function(event){
+                    userInput.val() =  localStorage.setItem("userInput", JSON.stringify(userInput.value));
+                    event.preventDefault;
+                });
+                saveValue();
+            };
+
+        console.log(userInput);
     });
-//userInput.value  
-
-    //????event.preventDefault to stop input from clearing?????
-
-       // moment().format('MMMM Do YYYY, h:mm:ss a');
-
-        //Current Day displayed at top of calendar 
-// Time blocks 
-// 8 am - 9 pm 
-
-// Clickable time blocks 
-// Save button for each time blocks
-// Text displayed in local storage 
-// Refresh page - saved event persists 
-
-//<script type="text/javascript">
-   // document.getElementById("txt_1").value = getSavedValue("txt_1");    // set the value to this input
-      //  document.getElementById("txt_2").value = getSavedValue("txt_2");   // set the value to this input
-        /* Here you can add more inputs to set value. if it's saved */
-
-        //Save the value function - save it to localStorage as (ID, VALUE)
-       // function saveValue(e){
-        //    var id = e.id;  // get the sender's id to save it . 
-        //    var val = e.value; // get the value. 
-         //   localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
-       // }
-
-        //get the saved value function - return the value of "v" from localStorage. 
-       // function getSavedValue  (v){
-       //     if (!localStorage.getItem(v)) {
-         //       return "";// You can change this to your defualt value. 
-        //    }
-         //   return localStorage.getItem(v);
-       // }
-
-       //<input type="text" id="txt_1" onkeyup='saveValue(this);'/> 
-//<input type="text" id="txt_2" onkeyup='saveValue(this);'/> 
-
-//localStorage.removeItem('Array');
-//localStorage.setItem('Array', JSON.stringify(this.array));
-//The above is how you save it to get it back you do this in the ngOnInit:
-
-//this.array = JSON.parse(localStorage.getItem('Array'));
-//localStorage.removeItem('Array'); // to clear it again.
-
+ 
 
 </script>
